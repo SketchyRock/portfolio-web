@@ -286,3 +286,36 @@ section {
     align-items: center;
     gap: 5px;
 }
+
+.blog-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.blog-item a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.blog-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.blog-item span {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* Style the actual blog content */
+.prose p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--secondary);
+}
+
+.prose h1, .prose h2 {
+    color: var(--text);
+    margin-top: 2rem;
+}

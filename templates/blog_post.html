@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Enzo Hins - Blog Post{% endblock %}
+
+{% block hero %}
+<section>
+    <article class="prose">
+        {{ content|safe }}
+    </article>
+
+    <div class="button-container" style="margin-top: 2rem; text-align: center;">
+        <a href="/blog" class="cta-button">← Back to Blog</a>
+    </div>
+</section>
+{% endblock %}
