@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<div id="top"></div>
+
+
+<body>
+    <main>
+        <header class="main-header">
+            <h1>Enzo Hins</h1>
+            <nav>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block hero %}{% endblock %}
+
+        {% block about_me %}{% endblock %}
+
+        {% block projects %}{% endblock %}
+
+    </main>
+
+
+
+    <footer class="fixed-footer">
+        <nav>
+            <ul>
+                <li><a href="https://github.com/SketchyRock" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ url_for('static', filename='img/github.svg') }}" alt="github" class="nav-icon">
+                        GitHub</a></li>
+                <li><a href="mailto:hinsem@dukes.jmu.edu" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ url_for('static', filename='img/envelope.svg') }}" alt="envelope" class="nav-icon">
+                        Email</a></li>
+                <li><a href="https://www.linkedin.com/in/enzohins/" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ url_for('static', filename='img/linkedin.svg') }}" alt="linkedin" class="nav-icon">
+                        LinkedIn</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

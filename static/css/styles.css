@@ -1,0 +1,290 @@
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --secondary: #666666;
+    --accent: #f39200;
+}
+
+/* 1. Added min-height and padding-bottom to body */
+body {
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 1rem 1.5rem 8rem 1.5rem; /* Increased bottom padding */
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* 2. New Footer Styles (Fixed to bottom) */
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    backdrop-filter: blur(10px);          /* Clean blur effect */
+    border-top: 1px solid #eaeaea;
+    padding: 1.5rem 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.fixed-footer a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.fixed-footer a:hover {
+    color: var(--accent);
+}
+
+/* Your existing styles below */
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 80vh;
+    padding-top: 5rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.main-header ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the link container */
+.fixed-footer a, .main-header a {
+    display: flex;
+    align-items: center; /* Aligns icon and text vertically */
+    text-decoration: none;
+    gap: 8px;            /* Perfect spacing between icon and text */
+}
+
+/* Style for the icon itself */
+.nav-icon {
+    width: 18px;         /* Control size here */
+    height: 18px;
+    object-fit: contain; /* Ensures the icon doesn't stretch */
+    filter: grayscale(100%); /* Optional: makes icons match your minimalist theme */
+    transition: filter 0.2s;
+}
+
+.nav-icon:hover {
+    filter: grayscale(0%);   /* Brings back color on hover */
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 75vh; /* Takes up most of the screen on entry */
+    padding: 0 1.5rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive sizing */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.sub-headline {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    font-weight: 400;
+}
+
+.quote-block {
+    margin: 4rem 0;
+    max-width: 500px;
+}
+
+.quote-block blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text);
+}
+
+.quote-block cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text);
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+#home {
+    /* Ensures this section feels distinct in your single-page layout */
+    padding-bottom: 4rem;
+}
+
+.impact-statement {
+    margin-top: 2rem;
+    font-size: 1.1rem; /* Slightly larger for impact */
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.impact-statement strong {
+    color: var(--accent); /* Uses your blue accent color for the highlights */
+    font-weight: 600;
+}
+
+.general-info {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary); /* Subtle gray for the longer narrative */
+    max-width: 90%;
+}
+
+.general-info strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically if the container has height */
+    margin-top: 4rem;        /* Adds some breathing room below your text */
+    width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.project-icon {
+    color: var(--accent);
+    width: 20px;
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--secondary);
+    flex-grow: 1; /* Pushes the tags and link to the bottom */
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1.5rem 0;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    background: #f5f5f5;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--secondary);
+}
+
+.repo-link {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
