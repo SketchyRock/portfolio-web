@@ -2,29 +2,66 @@
     {
         "name": "Password Manager",
         "description": "A lightweight terminal-based password manager for local credential storage using Java and Base64 encoding.",
-        "learned": ["Java", "CLI", "File I/O", "Base64 Encoding", "OOP"],
+        "learned": [
+            "Java",
+            "CLI",
+            "File I/O",
+            "Base64 Encoding",
+            "OOP"
+        ],
         "icon": "lock.svg",
         "repo": "https://github.com/SketchyRock/password-manager"
     },
     {
         "name": "Mp3 Player",
         "description": " A minimalist Python music player that automatically streams MP3s from a local directory for a focused lofi experience.",
-        "learned": ["Python", "TUI", "System Resource Management", "OOP"],
+        "learned": [
+            "Python",
+            "TUI",
+            "System Resource Management",
+            "OOP"
+        ],
         "icon": "music-player.svg",
         "repo": "https://github.com/SketchyRock/lofi-player"
     },
     {
         "name": "Technical Writeups & Retrospectives",
         "description": "A centralized collection of technical resources, custom scripts, and performance retrospectives from my cyber defense and programming competitions.",
-        "learned": ["Markdown", "Technical Communication", "Incident Response", "OSINT", "CTF", "Blue Team", "Scripting"],
+        "learned": [
+            "Markdown",
+            "Technical Communication",
+            "Incident Response",
+            "OSINT",
+            "CTF",
+            "Blue Team",
+            "Scripting"
+        ],
         "icon": "archive.svg",
         "repo": "https://github.com/SketchyRock/writeups"
     },
     {
         "name": "Scoundrel Game",
         "description": "Scoundrel is a terminal-based Python implementation of the classic solo dungeon-crawling card game.",
-        "learned": ["Python", "TUI", "Game Logic", "OOP"],
+        "learned": [
+            "Python",
+            "TUI",
+            "Game Logic",
+            "OOP"
+        ],
         "icon": "controller.svg",
         "repo": "https://github.com/SketchyRock/scoundrel-game"
+    },
+    {
+        "name": "Portfolio Website",
+        "description": "A personal portfolio website built with Flask to showcase my projects and skills in cybersecurity and programming.",
+        "learned": [
+            "Flask",
+            "HTML",
+            "CSS",
+            "Jinja2 Templating",
+            "Web Development"
+        ],
+        "icon": "browser-chrome.svg",
+        "repo": "https://github.com/SketchyRock/portfolio-web"
     }
 ]
