@@ -31,6 +31,55 @@ Unlike a static HTML site, this project uses a lightweight dynamic backend to ma
 │   └── img/              # Assets and icons
 ├── templates/            # Jinja2 HTML templates (base, index, blog, etc.)
 └── requirements.txt      # Python dependencies
+```
+
+## Local Development
+
+To run this project locally on your machine:
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/SketchyRock/portfolio-web.git](https://github.com/SketchyRock/portfolio-web.git)
+    cd portfolio-web
+    ```
+
+2.  **Create a Virtual Environment (Optional but recommended)**
+    ```bash
+    python -m venv venv
+    # Windows:
+    venv\Scripts\activate
+    # Mac/Linux:
+    source venv/bin/activate
+    ```
+
+3.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Run the Application**
+    ```bash
+    python app.py
+    ```
+    The site will be available at `http://127.0.0.1:5000`.
+
+## Content Management
+
+### Adding a New Project
+To add a project to the homepage, navigate to `data/projects.json` and append a new object:
+```json
+{
+    "name": "Project Name",
+    "description": "Brief description...",
+    "icon": "icon-name.svg", # If not no icon or words will appear
+    "learned": ["Skill 1", "Skill 2"],
+    "repo": "[https://github.com/](https://github.com/)..." # where ever you wish the project to take the user to
+}
+```
+
+## Publishing a Blog Post
+Simply drop a **.md** file into the **data/blogs/** folder. The file name will be automatically parsed into the title (e.g., my-new-post.md becomes "My New Post").
+(Preferably include data before name "1-30-2020").
 
 # TODO: implement github api pull for autmatic blog posts
 # TODO: add more blog posts and potentially fix the spacing on blog page
