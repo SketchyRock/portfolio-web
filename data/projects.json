@@ -25,7 +25,7 @@
         "repo": "https://github.com/SketchyRock/lofi-player"
     },
     {
-        "name": "Technical Writeups & Retrospectives",
+        "name": "Technical Writeups",
         "description": "A centralized collection of technical resources, custom scripts, and performance retrospectives from my cyber defense and programming competitions.",
         "learned": [
             "Markdown",

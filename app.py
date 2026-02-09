@@ -5,7 +5,6 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     with open("data/projects.json", "r") as f:

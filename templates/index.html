@@ -9,7 +9,8 @@
         <h1 class="hero-title">Computer Science</h1>
         <h1 class="hero-title">&</h1>
         <h1 class="hero-title">Cyber Security</h1>
-        <p class="sub-headline">Software Development • Defensive Security • 3.9 GPA</p>
+        <p class="sub-headline">Software Development • Defensive Security • 3.9
+            GPA</p>
     </div>
 
     <div class="quote-block">
@@ -31,12 +32,17 @@
 
     <div class="impact-statement">
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;As a Computer Science student at James Madison University maintaining a <strong>3.94 GPA</strong>,
-            I have earned <strong>President's List</strong> honors while developing a specialized foundation in
+            &nbsp;&nbsp;&nbsp;&nbsp;As a Computer Science student at James
+            Madison University maintaining a <strong>3.94
+                GPA</strong>,
+            I have earned <strong>President's List</strong> honors while
+            developing a specialized foundation in
             <strong>Blue Team Defense</strong>.
-            My experience spans <strong>Palo Alto Firewall administration</strong>, <strong>incident response</strong>,
+            My experience spans <strong>Palo Alto Firewall
+                administration</strong>, <strong>incident response</strong>,
             and
-            <strong>algorithmic problem-solving</strong>, demonstrating a proven ability to secure complex networks and
+            <strong>algorithmic problem-solving</strong>, demonstrating a proven
+            ability to secure complex networks and
             engineer efficient,
             <strong>object-oriented software</strong>.
         </p>
@@ -44,23 +50,29 @@
 
     <div class="general-info">
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;I am deeply committed to the competitive security landscape, actively seeking out every <strong>CTF</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;I am deeply committed to the competitive
+            security landscape, actively seeking out
+            every <strong>CTF</strong>
             and <strong>Blue Team</strong>
-            competition to sharpen my skills in <strong>penetration testing</strong> and <strong>remediation</strong>.
-            Beyond the technical execution, I document my progress through <strong>technical retrospectives</strong> in
+            competition to sharpen my skills in <strong>penetration
+                testing</strong> and <strong>remediation</strong>.
+            Beyond the technical execution, I document my progress through
+            <strong>technical retrospectives</strong> in
             order to reflect
             on my learning and growth.
-            My long-term goal is to support <strong>United States national security</strong>,
-            protecting critical infrastructure through high-stakes cyber work in either the <strong>public or private
+            My long-term goal is to support <strong>United States national
+                security</strong>,
+            protecting critical infrastructure through high-stakes cyber work in
+            either the <strong>public or private
                 sector</strong>.
         </p>
     </div>
 
-<div class="button-container">
-    <a href="#projects" class="cta-button">
-        View my Projects <i data-lucide="chevron-down"></i>
-    </a>
-</div>
+    <div class="button-container">
+        <a href="#projects" class="cta-button">
+            View my Projects <i data-lucide="chevron-down"></i>
+        </a>
+    </div>
 </section>
 {% endblock %}
 
@@ -69,21 +81,28 @@
     <h2 class="section-title">Technical Projects</h2>
     <div class="projects-grid">
         {% for project in projects %}
-        <div class="project-card">
+        <a href="{{ project.repo }}" target="_blank" rel="noopener"
+            class="project-card">
+
             <div class="card-header">
-                <img src="{{ url_for('static', filename='img/' + project.icon) }}" alt="icon" class="project-icon">
+                <img
+                    src="{{ url_for('static', filename='img/' + project.icon) }}"
+                    alt class="project-icon">
                 <h3>{{ project.name }}</h3>
             </div>
+
             <p class="project-desc">{{ project.description }}</p>
+
             <div class="tag-container">
                 {% for tech in project.learned %}
                 <span class="tech-tag">{{ tech }}</span>
                 {% endfor %}
             </div>
-            <a href="{{ project.repo }}" target="_blank" rel="noopener" class="repo-link">
+
+            <span class="repo-cta">
                 View Repository <i data-lucide="github"></i>
-            </a>
-        </div>
+            </span>
+        </a>
         {% endfor %}
     </div>
 </section>
