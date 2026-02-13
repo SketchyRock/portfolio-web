@@ -81,5 +81,8 @@ To add a project to the homepage, navigate to `data/projects.json` and append a 
 Simply drop a **.md** file into the **data/blogs/** folder. The file name will be automatically parsed into the title (e.g., my-new-post.md becomes "My New Post").
 (Preferably include data before name "1-30-2020").
 
-# TODO: implement github api pull for autmatic blog posts
-# TODO: add more blog posts and potentially fix the spacing on blog page
+---
+
+# TODO:
+* implement github api pull for autmatic blog posts
+* add more blog posts and potentially fix the spacing on blog page
